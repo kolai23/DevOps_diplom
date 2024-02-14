@@ -24,7 +24,7 @@ pipeline {
 
         stage('Docker Build') { 
             steps {
-                sh 'docker build -t diplom/tomcat:${env.BUILD_NUMBER} .'
+                sh '#!/bin/bash /n docker build -t diplom/tomcat:${env.BUILD_NUMBER} .'
             }
         }
 
