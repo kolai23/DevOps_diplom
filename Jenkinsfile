@@ -10,13 +10,13 @@ pipeline {
             }
         }
 
-        stage('Build') { 
+        stage('Build Artifacts') { 
             steps {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
 
-        stage('Arcive Artifact') { 
+        stage('Arcive Artifacts') { 
             steps {
                 archiveArtifacts artifacts: 'target/*.war'
             }
@@ -24,13 +24,13 @@ pipeline {
 
         stage('Docker Build') { 
             steps {
-                sh 'docker build -t diplom/tomcat:${env.BUILD_ID} .'
+                sh 'docker build -t diplom/tomcat:${env.BUILD_NUMBER} .'
             }
         }
 
-        stage('Docker pull') { 
+        stage('Docker Pull') { 
             steps {
-                sh 'docker push diplom/tomcat:${env.BUILD_ID} '
+                sh 'docker push diplom/tomcat:${env.BUILD_NUMBER} '
             }
         }
 
