@@ -22,6 +22,19 @@ pipeline {
             }
         }
 
+        stage('Docker Build') { 
+            steps {
+                sh 'docker build -t diplom/tomcat:${env.BUILD_ID} .'
+            }
+        }
+
+        stage('Docker pull') { 
+            steps {
+                sh 'docker push diplom/tomcat:${env.BUILD_ID} '
+            }
+        }
+
+
 
     }
 }
