@@ -29,7 +29,7 @@ pipeline {
 
         stage('Docker Pull') { 
             steps {
-                sh "gcloud auth configure-docker us-central1-docker.pkg.dev"
+                sh "sudo gcloud auth configure-docker us-central1-docker.pkg.dev"
 
                 sh "docker tag diplom/tomcat:latest us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:${env.BUILD_NUMBER}"
 
