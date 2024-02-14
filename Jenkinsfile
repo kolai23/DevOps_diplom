@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+    environment {
+    CLOUDSDK_CORE_PROJECT='insights-api-localdev'
+    CLIENT_EMAIL='jenkins@insights-api-localdev.iam.gserviceaccount.com'
+    GCLOUD_CREDS=credentials('gcloud-creds')
+  }
     stages {
         stage('Clone') {
             steps {
@@ -24,13 +28,17 @@ pipeline {
 
         stage('Docker Build') { 
             steps {
-                sh "docker build -t diplom/tomcat:${env.BUILD_NUMBER} ."
+                sh "docker build -t diplom/tomcat:latest ."
             }
         }
 
         stage('Docker Pull') { 
             steps {
-                sh "docker push diplom/tomcat:${env.BUILD_NUMBER} "
+                sh "gcloud auth configure-docker us-central1-docker.pkg.dev"
+
+                sh "docker tag diplom/tomcat:latest us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:${env.BUILD_NUMBER}"
+
+                sh "docker push us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:${env.BUILD_NUMBER}"
             }
         }
 
