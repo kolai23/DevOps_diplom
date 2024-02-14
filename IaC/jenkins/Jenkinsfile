@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                dir('java-login-app.'){
+                    sh 'rm -R *'
+                    git branch: 'master', credentialsId: 'bitbucket_key', url: 'https://kolai23@bitbucket.org/diplomvab/java-login-app.git'
+                }
+            }
+        }
+    }
+        
+    stage('Build') {
+        steps {
+            dir('spring-petclinic') {
+                sh './mvnw package'
+                sh './mvnw test'
+                stash(name: 'petclinic', includes: 'target/*.jar')
+            }
+        }
+    }
+        
+    stage('Parallel') {
+        parallel {
+            stage('Integration Tests') {
+                agent {
+                    docker {
+                        image 'maven:3.9.3-eclipse-temurin-17'
+                        label 'digital-ocean'
+                        args '-p 8180:8080'
+                    }
+                }
+                steps {
+                    unstash 'petclinic'
+                    sh '''
+                        java -jar target/*.jar &
+                        sleep 50
+                    '''
+                    echo 'Hello, Maven'
+                }
+            }
+        }
+    }
+
+    stage('Publish') {
+        steps {
+            dir('spring-petclinic') {
+                archiveArtifacts artifacts: 'target/*.jar'
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
+    }
+}

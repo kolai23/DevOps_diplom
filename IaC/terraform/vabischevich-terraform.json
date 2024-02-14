@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "seismic-vista-405108",
+  "private_key_id": "beccc59e4254142027f3a4c0e3881eff35e89c87",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDUlyOMECUtPLTL\nzZrybfk+QBb4/1Q0pDhz/HMQ45T2Xd7AbIvcM44Eu7s2A+S8TmjFdgZTdfOnDXye\nVrPRhdf8Aoe2gt2R96gnOOi0aGiHY98+klOqfO+kkYT8n0wkp8i/GIsuEt5JkjAF\nnXGzkVFLA2v1zDhWt6okk4l6QzU5k42py5sLEFSGOlCHiT+aLuyeaz8rouO+vB+I\nLeQ3RodrbX9Pds98crdK/TYaUaNEkJmmthgEG0ncp0rXdvmxti39so7X9O+fNCCo\nRR4w0Eb8qSFzIrU+wsLOvu1S8zugCeWuPLZspF1DnUbW4+U/OLbRn1McDaojuV6J\nQEXH2sblAgMBAAECggEADK+l8a7piQdBy96EjAC2U35fl26S4z8E8bAYElDLjAOS\nl1tQmLo63RIEkxt2Fk/FPoNTYeMO5OJG3X5TnLim1lMQU+htlQYLhRTQTiqakkLl\nv49JjtwYDE6Znrmi099vVHgAMaaFdCwwiEnRhgf6hn0m7UZbsb7IoZhsS8rpNsP5\nJpwl4MMN/4Vig4u+eZw1odvkILXeumuCSkCJX7ovePp+77XnFa2ewir4vFVMwBEO\nDA2qVwpMlOXxp4O7+2QP1Qpj9kdKuwSpb+/r0rmSN54chIRWMNr6CZr/pctqqsZJ\nGcqFsTf4qhyOoeVWbAidnLCHFmxO9czTjWbQdE8CwQKBgQD9hJCtlIWQPXb2bQPH\nrlqbP2xyVBcrHXJU7FSFFf0l9SH5GaSTGByg7Sk7ODvw8xrUrpya0uZWmXnl9cqE\ndnoxo69KzOGvvhjL3KLf4bhh04marOFInLgs/WtTt/hGzO0OOlXAyfDMDmbLUPVp\nKPnuaqhQWhij7BR7kGZ6tI6MSwKBgQDWq/2Dla1Csbl+U1dnHM3IvqcHtywAR3HO\nRXufJnCiMKrpo1Ncsy1mRwwfNiZ1OJ39tv8JYKHJRY433NUTSZhQlyL+k2P6dDkc\n/D8GBzjJjX8piecZ2jjaV837Z6835ecGIRMhmnnD8T4jpdcMYWrjSSmiZWtSFhsS\noT4t2DubjwKBgQCMX5q8gkByXZZBXJt7NU92JuglZepuNR/ZZgJmroY9Pj5Rb6Fw\n0SkI8kiiQcDu6a0xln2gPKbNzK1yZ2Z7ch623atx/3/3j4qrVr/Yt2Mgx8CppJAZ\nZK2WO7vx3yvaCB46gpJ47VgnpNHGQk2grM+289e+piR+n3m38XzM9Kz5gQKBgFmN\n7niSXHFSSxvUEMZHUeHJB01EsOp845E1k1jVZG+E9gf5xrEJXosoYHo00N5d/Cr3\nyHVVBqk8hxPu4ETnks8r/cFOI4s8KQdag8A0CxCqIr5ldS9nxgfwUVHr80DSfAom\niiCenOWNImskqA3WJg0jXGcPADKCXlDrS1E8v8EpAoGALqSHnLIt7OFfAB7d+nRE\nLJwLJ3u2C0Cminu9nzDnCXlxkzx7Qo5rXvtguLi7PCPiNf4QGgtv4OCggubCK7KR\njGmyP245KqTAyhrXyc0ynN2tK0PZpVo7pHt+3eKz26I0XzP9vqavuIgWBaAafo9N\nJiekU85b92XPJUS9H4mFMo0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vabischevich-terraform@seismic-vista-405108.iam.gserviceaccount.com",
+  "client_id": "108747381764694932670",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vabischevich-terraform%40seismic-vista-405108.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
