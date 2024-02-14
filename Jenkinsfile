@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tool name: 'MAVEN', type: 'maven'
+
     stages {
         stage('Clone') {
             steps {
