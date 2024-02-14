@@ -24,13 +24,13 @@ pipeline {
 
         stage('Docker Build') { 
             steps {
-                sh 'sudo docker build -t diplom/tomcat:${env.BUILD_NUMBER} .'
+                sh "sudo docker build -t diplom/tomcat:${env.BUILD_NUMBER} ."
             }
         }
 
         stage('Docker Pull') { 
             steps {
-                sh 'sudo docker push diplom/tomcat:${env.BUILD_NUMBER} '
+                sh "sudo docker push diplom/tomcat:${env.BUILD_NUMBER} "
             }
         }
 
