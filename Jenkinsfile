@@ -15,6 +15,13 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
-        
+
+        stage('Arcive Artifact') { 
+            steps {
+                arciveArtifacts artifacts: 'target/*.war'
+            }
+        }
+
+
     }
 }
