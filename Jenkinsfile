@@ -30,7 +30,7 @@ pipeline {
             }
         }
 
-        stage('Docker Pull') { 
+        stage('Docker Push') { 
             steps {
                 sh "gcloud auth activate-service-account --key-file=$GCP_SECRET_ACCESS_KEY"
                 sh "gcloud auth configure-docker us-central1-docker.pkg.dev"
@@ -40,8 +40,5 @@ pipeline {
                 sh "docker push us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:${env.BUILD_NUMBER}"
             }
         }
-
-
-
     }
 }
