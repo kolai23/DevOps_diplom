@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.devopsrealtime</groupId>
 	<artifactId>dptweb</artifactId>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>dptweb</name>
 	<description>DPT DevOps project for Spring Boot</description>
@@ -36,7 +37,10 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-			
+		
+		
+		
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
