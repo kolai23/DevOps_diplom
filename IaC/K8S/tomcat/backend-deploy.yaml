@@ -15,10 +15,9 @@ spec:
     metadata:
       labels:
         project: tomcat
+    spec:
       containers:
       - name: tomcat
         image: us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:46
         ports:
-            - containerPort: 9000
-nodeSelector:
-  team: backend
+          - containerPort: 9000
