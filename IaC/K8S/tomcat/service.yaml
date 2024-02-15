@@ -6,9 +6,8 @@ metadata:
     env: prod
 spec:
   selector:
-    app: web-backend
+    app: tomcat
   ports:
-  - port: 8080
+  - port: 9000
     protocol: TCP
-    targetPort: 443
-  type: ClusterIP
+    targetPort: http-tomcat

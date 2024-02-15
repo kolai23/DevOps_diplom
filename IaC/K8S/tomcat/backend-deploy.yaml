@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment-autoscaling
+  name: tomcat
   labels:
     app: tomcat
     env: prod
@@ -16,9 +16,9 @@ spec:
       labels:
         project: tomcat
       containers:
-        - name: tomcat
-          image: us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat
-          ports:
-            - containerPort: 8888
+      - name: tomcat
+        image: us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:46
+        ports:
+            - containerPort: 9000
 nodeSelector:
   team: backend
