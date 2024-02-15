@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        AWS_SECRET_ACCESS_KEY = credentials('gcp_key_file')
+    }
     stages {
         stage('Clone') {
             steps {
@@ -29,7 +32,8 @@ pipeline {
 
         stage('Docker Pull') { 
             steps {
-                sh "sudo gcloud auth configure-docker us-central1-docker.pkg.dev"
+                sh "gcloud auth activate-service-account --key-file=$AWS_SECRET_ACCESS_KEY"
+                sh "gcloud auth configure-docker us-central1-docker.pkg.dev"
 
                 sh "docker tag diplom/tomcat:latest us-central1-docker.pkg.dev/seismic-vista-405108/diplom/tomcat:${env.BUILD_NUMBER}"
 
